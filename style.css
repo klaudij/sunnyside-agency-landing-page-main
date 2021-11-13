@@ -99,9 +99,12 @@ nav ul.terug {
 nav ul li {
   margin: 20px 0;
   margin-right: 30px;
+  transition: 0.3s;
 }
 nav ul li:hover {
 opacity: 0.6;
+border-bottom: 1px solid white;
+transition: 0.3s;
 }
 
 
@@ -114,6 +117,7 @@ nav ul li a {
 /****************/
 /**** Main ****/
 /****************/
+
 
 /*** Header image ***/
 .desktop {
@@ -183,6 +187,13 @@ main section:nth-of-type(2) div a {
   border-radius: 3px;
 
   text-transform: uppercase;
+  transition: 0.3s;
+}
+
+main section:nth-of-type(2) div a:hover {
+  border-bottom: 4px solid hsl(51, 100%, 49%);
+  border-top: 4px solid hsl(51, 100%, 49%);
+  transition: 0.3s;
 }
 
 /*** tStand out +image ***/
@@ -224,6 +235,15 @@ main section:nth-of-type(3) div a {
   border-radius: 3px;
 
   text-transform: uppercase;
+  transition: 0.3s;
+}
+
+main section:nth-of-type(3) div a:hover {
+  border-bottom: 4px solid hsl(7, 99%, 70%);
+  border-top: 4px solid hsl(7, 99%, 70%);
+
+  transition: 0.3s;
+
 }
 
 /*** Graphic design ***/
@@ -388,6 +408,10 @@ footer img {
 
 footer div:nth-of-type(2) {
   margin: 50px 0;
+}
+
+footer a:hover {
+opacity: 0.6;
 }
 
 .attribution {
