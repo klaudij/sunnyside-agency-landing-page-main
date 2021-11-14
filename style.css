@@ -711,11 +711,15 @@ main section:nth-of-type(5) p {
   grid-template-columns: repeat(4, 1fr);
 }
 
+/*** Footer***/
 
-
-footer ul {
+footer nav ul {
   display: flex;
   flex-direction: row;
+}
+
+footer nav ul li{
+margin:0 30px;
 }
 
 }
