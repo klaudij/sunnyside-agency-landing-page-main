@@ -44,17 +44,28 @@ img {
   height: auto;
 }
 
+button {
+  border: none;
+  background:none;
+}
+
 /****************/
 /**** Header ****/
 /****************/
 #menu {
+  margin-left: auto;
+}
+
+#menu img{
   width: 30px;
   margin-left: auto;
+  /* visibility: hidden; */
 }
 
 header {
   background-color: #3ebfff;
-  position: relative;
+  position: absolute;
+  width: 100%;
   padding: 20px 10px;
 
   display: flex;
@@ -67,7 +78,7 @@ header img {
   width: 120px;
 }
 /*** NAV ***/
-nav ul {
+header nav ul {
   list-style: none;
   background-color: white;
 
@@ -83,32 +94,31 @@ nav ul {
   top: 80px;
   height: 300px;
 
-  opacity: 0;
+  visibility: hidden;
   transition: all 0.6s;
   transition-delay: 0.1s;
   transform: translateX(30em);
 }
 
-nav ul.terug {
+header nav ul.terug {
   transform: translateX(0);
   transition: 0.5s;
-
-  opacity: 1;
+  visibility: visible;
 }
 
-nav ul li {
+header nav ul li {
   margin: 20px 0;
   margin-right: 30px;
   transition: 0.3s;
 }
-nav ul li:hover {
+header header nav ul li:hover {
 opacity: 0.6;
 border-bottom: 1px solid white;
 transition: 0.3s;
 }
 
 
-nav ul li a {
+header nav ul li a {
   font-family: "Barlow", sans-serif;
   color: hsl(213, 9%, 39%);
   font-size: 1.4em;
@@ -314,11 +324,6 @@ main section:nth-of-type(5) {
   flex-direction: column;
 }
 
-main section:nth-of-type(5) img {
-  margin-bottom: 30px;
-  border-radius: 50%;
-  width: 65px;
-}
 
 main section:nth-of-type(5) h2 {
   margin: 60px 0;
@@ -330,7 +335,20 @@ main section:nth-of-type(5) h2 {
   text-align: center;
 }
 
-main section:nth-of-type(5) p {
+main section:nth-of-type(5) figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main section:nth-of-type(5) img {
+  margin-bottom: 30px;
+  border-radius: 50%;
+  width: 65px;
+}
+
+main section:nth-of-type(5) blockquote p {
   width: 300px;
   color: hsl(213, 9%, 39%);
   font-size: 1.1em;
@@ -338,27 +356,24 @@ main section:nth-of-type(5) p {
   text-align: center;
 }
 
-main section:nth-of-type(5) h3 {
+main section:nth-of-type(5) figcaption {
   margin: 30px 0 70px 0;
   color: hsl(198, 62%, 26%);
-  font-size: 1.1em;
+  font-size: 1.3em;
+  font-family: "Fraunces", serif;
   line-height: 30px;
   text-align: center;
 }
 
-main section:nth-of-type(5) h3 span {
-  color: hsla(210, 9%, 39%, 0.392);
-  font-family: "Barlow", sans-serif;
-  font-weight: 200;
+main section:nth-of-type(5) figcaption p {
+  margin: 5px 0 20px 0;
+  color: hsl(195, 2%, 66%);
   font-size: 0.8em;
+  line-height: 30px;
+  text-align: center;
 }
 
-main section:nth-of-type(5) div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+
 
 /*** Immage collage***/
 .collage {
@@ -373,6 +388,7 @@ footer {
   align-items: center;
   justify-content: center;
   padding-top: 45px;
+  padding-bottom: 30px;
   background-color: #8fd4c5;
   color: hsl(167, 40%, 24%);
 }
@@ -389,25 +405,33 @@ footer a {
 }
 
 footer ul {
-  margin-top: 40px;
-  margin-right: 25px;
-  margin-bottom: 10px;
 
   list-style: none;
   text-align: center;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+footer nav {
+  margin: 40px 0 80px 0;
 }
 
-footer ul li {
-  margin: 20px 35px;
+footer nav ul{
+  flex-direction: column;
 }
+
+footer nav ul li{
+  margin: 10px 0;
+}
+
 
 footer img {
   width: 20px;
-  margin: 0 10px;
 }
 
-footer div:nth-of-type(2) {
-  margin: 50px 0;
+footer div ul li {
+  padding: 0 15px;
 }
 
 footer a:hover {
@@ -423,12 +447,28 @@ opacity: 0.6;
 }
 
 
+/**********************/
+/******* MEDIA QUERY *******/
+/**********************/
 
+
+
+
+@media screen and (min-width: 480px) {
+  main section:first-of-type .mobile {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    
+  }
+
+}
 
 @media screen and (min-width: 1020px) {
 
 #menu {
     display: none;
+    visibility: hidden;
 }
 
 header{
@@ -448,7 +488,7 @@ header nav {
 
   header nav ul {
     transform: translateX(0);
-    opacity: 1;
+    visibility: visible;
     position: static;
     transform: none;
 

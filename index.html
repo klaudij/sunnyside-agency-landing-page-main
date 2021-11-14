@@ -24,9 +24,11 @@
   </head>
   <body>
     <header>
-      <img src="images/logo.svg" alt="" />
+      <img src="images/logo.svg" alt="synnyside logo" />
 
-      <img id="menu" src="images/icon-hamburger.svg" alt="" />
+      <button id="menu" aria-label="navigation dropdown menu">
+        <img src="images/icon-hamburger.svg" alt="Menu button" />
+      </button>
 
       <nav>
         <ul>
@@ -43,12 +45,12 @@
         <h1>We are creatives</h1>
         <img src="images/icon-arrow-down.svg" alt="" />
         <img class="mobile" src="images/mobile/image-header.jpg" alt="" />
-        <img class="desktop" src="images/desktop/image-header.jpg" alt="">
+        <img class="desktop" src="images/desktop/image-header.jpg" alt="" />
       </section>
 
       <section>
-        <img class="mobile"  src="images/mobile/image-transform.jpg" alt="" />
-        <img  class="desktop" src="images/desktop/image-transform.jpg" alt="" />
+        <img class="mobile" src="images/mobile/image-transform.jpg" alt="" />
+        <img class="desktop" src="images/desktop/image-transform.jpg" alt="" />
         <div>
           <h2>Transform your brand</h2>
 
@@ -64,7 +66,7 @@
 
       <section>
         <img class="mobile" src="images/mobile/image-stand-out.jpg" alt="" />
-        <img  class="desktop" src="images/desktop/image-stand-out.jpg" alt="" />
+        <img class="desktop" src="images/desktop/image-stand-out.jpg" alt="" />
         <div>
           <h2>Stand out to the right audience</h2>
           <p>
@@ -101,68 +103,126 @@
       <section>
         <h2>Client testimonials</h2>
 
-        <div>
-          <img src="images/image-emily.jpg" alt="" />
-          <p>
-            We put our trust in Sunnyside and they delivered, making sure our
-            needs were met and deadlines were always hit.
-          </p>
+        <figure>
+          <img src="images/image-emily.jpg" alt="Emily R." />
+          <blockquote>
+            <p>
+              We put our trust in Sunnyside and they delivered, making sure our
+              needs were met and deadlines were always hit.
+            </p>
+          </blockquote>
+          <figcaption>
+            Emily R.
+            <p>Marketing Director</p>
+          </figcaption>
+        </figure>
 
-            <h3>Emily R. <span>Marketing Director</span></h3>
-        </div>
+        <figure>
+          <img src="images/image-thomas.jpg" alt="thomas S." />
+          <blockquote>
+            <p>
+              Sunnyside’s enthusiasm coupled with their keen interest in our
+              brand’s success made it a satisfying and enjoyable experience.
+            </p>
+          </blockquote>
+          <figcaption>
+            Thomas S.
+            <p>Chief Operating Officer</p>
+          </figcaption>
+        </figure>
 
-        <div>
-          <img src="images/image-thomas.jpg" alt="" />
-          <p>
-            Sunnyside’s enthusiasm coupled with their keen interest in our
-            brand’s success made it a satisfying and enjoyable experience.
-          </p>
-
-          <h3>Thomas S. <span> Chief Operating Officer</span></h3>
-        </div>
-
-        <div>
-          <img src="images/image-jennie.jpg" alt="" />
-          <p>
-            Incredible end result! Our sales increased over 400% when we worked
-            with Sunnyside. Highly recommended!
-          </p>
-
-          <h3>Jennie F.<span>Business Owner</span></h3>
-        </div>
+        <figure>
+          <img src="images/image-jennie.jpg" alt="Jennie F." />
+          <blockquote>
+            <p>
+              Incredible end result! Our sales increased over 400% when we
+              worked with Sunnyside. Highly recommended!
+            </p>
+          </blockquote>
+          <figcaption>
+            Jennie F
+            <p>Business Owner</p>
+          </figcaption>
+        </figure>
       </section>
 
       <div class="collage">
-        <img class="mobile" src="images/mobile/image-gallery-milkbottles.jpg" alt="" />
-        <img class="desktop" src="images/desktop/image-gallery-milkbottles.jpg" alt="" />
+        <img
+          class="mobile"
+          src="images/mobile/image-gallery-milkbottles.jpg"
+          alt=""
+        />
+        <img
+          class="desktop"
+          src="images/desktop/image-gallery-milkbottles.jpg"
+          alt=""
+        />
 
-        <img class="mobile" src="images/mobile/image-gallery-orange.jpg" alt="" />
-        <img class="desktop" src="images/desktop/image-gallery-orange.jpg" alt="" />
+        <img
+          class="mobile"
+          src="images/mobile/image-gallery-orange.jpg"
+          alt=""
+        />
+        <img
+          class="desktop"
+          src="images/desktop/image-gallery-orange.jpg"
+          alt=""
+        />
 
         <img class="mobile" src="images/mobile/image-gallery-cone.jpg" alt="" />
-        <img class="desktop" src="images/desktop/image-gallery-cone.jpg" alt="" />
+        <img
+          class="desktop"
+          src="images/desktop/image-gallery-cone.jpg"
+          alt=""
+        />
 
-        <img class="mobile" src="images/mobile/image-gallery-sugar-cubes.jpg" alt="" />
-        <img class="desktop" src="images/desktop/image-gallery-sugarcubes.jpg" alt="" />
+        <img
+          class="mobile"
+          src="images/mobile/image-gallery-sugar-cubes.jpg"
+          alt=""
+        />
+        <img
+          class="desktop"
+          src="images/desktop/image-gallery-sugarcubes.jpg"
+          alt=""
+        />
       </div>
     </main>
 
     <footer>
       <h2>Sunnyside</h2>
 
-      <div>
+      <nav aria-label="footer">
         <ul>
           <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">Projects</a></li>
         </ul>
-      </div>
+      </nav>
 
       <div>
-        <a href="#"> <img src="images/icon-facebook.svg" alt="" /></a>
-        <a href="#"> <img src="images/icon-instagram.svg" alt="" /></a>
-        <a href="#"> <img src="images/icon-twitter.svg" alt="" /></a>
-        <a href="#"> <img src="images/icon-pinterest.svg" alt="" /></a>
+        <ul>
+          <li>
+            <a href="#" aria-label="facebook">
+              <img src="images/icon-facebook.svg" alt="facebook icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#" aria-label="instagram">
+              <img src="images/icon-instagram.svg" alt="instagram icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#" aria-label="twitter">
+              <img src="images/icon-twitter.svg" alt="twitter icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#" aria-label="pinterest">
+              <img src="images/icon-pinterest.svg" alt="pinterest"
+            /></a>
+          </li>
+        </ul>
       </div>
     </footer>
 
